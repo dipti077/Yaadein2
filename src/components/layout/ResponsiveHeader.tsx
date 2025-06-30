@@ -4,6 +4,7 @@ import { Heart, Search, Bell, User, ChevronDown, LogOut, Settings, MessageCircle
 import { useAuth } from '../../hooks/useAuth';
 import { TouchOptimized } from '../ui/TouchOptimized';
 import { NotificationBadge } from '../navigation/NotificationBadge';
+import { BoltNewBadge } from '@/components/ui/bolt-new-badge'; // Importing the BoltNewBadge component
 
 interface ResponsiveHeaderProps {
   onSearchSubmit?: (query: string) => void;
@@ -166,6 +167,9 @@ export function ResponsiveHeader({ onSearchSubmit, onNotificationClick }: Respon
                 </>
               )}
             </div>
+
+            {/* Bolt Badge */}
+            <BoltNewBadge position="top-right" variant="light" size="medium" /> {/* Inserted here */}
           </div>
         </div>
       </div>
